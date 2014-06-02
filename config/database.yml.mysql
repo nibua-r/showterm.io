@@ -1,0 +1,27 @@
+defaults: &defaults
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  host: 127.0.0.1
+  # socket: /tmp/mysql.sock
+
+production:
+  database: showterm_prod
+  user: showterm
+  password:
+  pool: 10
+  <<: *defaults
+
+development:
+  database: showterm_dev
+  user: showterm
+  password:
+  pool: 5
+  <<: *defaults
+
+test:
+  database: showterm_test
+  user: showterm
+  password:
+  pool: 5
+  <<: *defaults

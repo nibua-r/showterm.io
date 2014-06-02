@@ -1,18 +1,21 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
+ruby '2.1.2'
 
 gem 'rails'
-gem 'heroku'
-gem 'bugsnag'
 gem 'secure_equals'
-gem 'rails_12factor'
 
-gem 'skylight'
+group :showtermio do
+  gem 'heroku'
+  gem 'bugsnag'
+  gem 'rails_12factor'
+  gem 'skylight'
+end
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'pg'
+gem 'mysql2', group: :mysql
+gem 'pg', group: :postgres
 
 # Gems used only for assets and not required
 # in production environments by default.
